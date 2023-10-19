@@ -1,0 +1,621 @@
+@charset "UTF-8";
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+body {
+  background: #ADA996;
+  background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+}
+
+a:hover {
+  background-color: rgba(255, 75, 43, 0.0745098039);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 65px;
+  margin-right: 5px;
+}
+
+.navbar .social-icons {
+  display: flex;
+}
+
+.navbar .social-icons a {
+  margin-right: 10px;
+}
+
+.navbar .social-icons a img {
+  height: 50px;
+}
+
+.navbar .navbar-brand {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+}
+
+.navbar .collapse {
+  display: none;
+}
+
+.navbar .collapse.show {
+  display: block;
+}
+
+.navbar .navbar-toggler-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #212529;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-toggler-icon::before, .navbar .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #212529;
+  top: 0%;
+  right: 2%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-toggler-icon::before {
+  transform: translateY(-6px);
+}
+
+.navbar .navbar-toggler-icon::after {
+  transform: translateY(6px);
+}
+
+.navbar.collapsed::before, .navbar.collapsed::after {
+  background-color: #212529;
+}
+
+.hero {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/vista-frontal-cocina-profesional.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  color: #ff4b2b;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.word-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.word-animation .word {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+  animation-delay: 0.5s;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.h1 {
+  text-align: center;
+}
+
+.h1 h1 {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 38px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px auto;
+}
+
+.card-container .card {
+  box-shadow: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 20px;
+  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.1294117647);
+  color: #333;
+  text-align: center;
+}
+
+.card-container .card:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-5px);
+}
+
+.card-container .card .card-img-top {
+  width: 100%;
+}
+
+.card-container .card .card-body h5.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-container .card .card-body p.card-text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.card-container .card .card-body a.btn.btn-primary, .card-container .card .card-body a.btn-primary.btn-custom {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-container .card .card-body a.btn.btn-primary:hover, .card-container .card .card-body a.btn-primary.btn-custom:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: translateY(-2px);
+}
+
+footer {
+  font-family: Roboto;
+  background-color: rgba(255, 255, 255, 0.1529411765);
+  color: #212529;
+  height: 60px;
+}
+
+footer .container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+footer .container-footer .footer-content {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-custom {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: translateY(-2px);
+}
+
+/* Estilos del apartado de categorias */
+.grid-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    flex-direction: column;
+  }
+}
+.grid-item-titulo {
+  display: block;
+  text-decoration: none;
+  color: #161719;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.section-categorias h4 {
+  font-size: 20px;
+}
+
+/* Estilos del apartado de categorias */
+.titulo-secciones {
+  font-size: 40px;
+}
+
+.grid-item {
+  color: aliceblue;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+}
+
+.categorias-completo {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item a:hover {
+  color: rgba(255, 75, 43, 0.8784313725);
+  font-weight: bold;
+}
+
+/* Estilos del apartado de categorias - Primero Seccion Categorias */
+.primer-section-categorias {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-primero-section {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #161719;
+  font-size: 40px;
+  width: 100%;
+}
+
+.image77 {
+  width: 300px; /* Ajusta el tamaño */
+  margin: 10px;
+}
+
+.image77:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos del apartado de informacion */
+.menu2 {
+  list-style: none;
+  padding: 0;
+  margin: 30px;
+}
+
+.menu2 li {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu2 li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+}
+
+.menu2 li a:hover {
+  background-color: rgba(242, 242, 242, 0.3647058824);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+ul.menu2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(242, 242, 242, 0.5019607843);
+  overflow: hidden;
+}
+
+ul.menu2 li {
+  float: left;
+}
+
+ul.menu2 li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+ul.menu2 li a:hover {
+  background-color: #dddddd;
+  transform: scale(1.1);
+}
+
+#quienes-somos, #modos-pagos, #trabaja-con-nosotros {
+  background-color: rgba(242, 242, 242, 0.3647058824);
+  margin-top: 50px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+#quienes-somos h3, #modos-pagos h3, #trabaja-con-nosotros h3 {
+  font-size: 35px;
+  font-weight: bold;
+  animation: fadeInDown 0.5s ease;
+}
+
+#quienes-somos p, #modos-pagos p, #trabaja-con-nosotros p {
+  font-size: 18px;
+  animation: fadeInUp 0.5s ease;
+}
+
+#donde-estamos, #envios {
+  margin-top: 50px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+#donde-estamos h3, #envios h3 {
+  font-size: 35px;
+  font-weight: bold;
+  animation: slideInLeft 0.5s ease;
+}
+
+#donde-estamos p, #envios p {
+  font-size: 18px;
+  animation: slideInRight 0.5s ease;
+}
+
+.container-info .zoomable-section {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.container-info .zoomable-section:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos de la sección de contacto */
+.h1-contacto {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.h1-contacto h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#contacto {
+  padding: 20px;
+}
+
+#contacto p {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#contacto .contact-item {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+#contacto .contact-item:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.calculator {
+  margin: 40px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.calculator h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.calculator p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.calculator button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.calculator #resultado {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff4b2b;
+}
+
+.calculator ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calculator ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.calculator ul li span {
+  font-weight: bold;
+  color: #ff4b2b;
+}
+
+.calculator button:focus {
+  outline: none;
+}
+
+.calculator button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.calculator button:disabled:hover {
+  background-color: #ccc;
+}
+
+.calculator #resultado {
+  color: #ff4b2b;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.calculator #resultado span {
+  font-size: 24px;
+  font-weight: normal;
+  color: #333;
+}
+
+.calculator button.reset-button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator button.reset-button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/*# sourceMappingURL=style.css.map */
